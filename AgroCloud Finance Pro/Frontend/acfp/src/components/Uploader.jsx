@@ -5,26 +5,13 @@ import { useState } from 'react';
 const Uploader =()=>{
     const [data,setdata]=useState(null);
 
-    // const config={
-    //     bucketName:import.meta.env.AWS_BUCKET_NAME,
-    //     dirName:"acfp-main-folder/",
-    //     region:import.meta.env.AWS_BUCKET_REGION,
-    //     accessKeyID:import.meta.env.AWS_ACCESS_KEY_ID,
-    //     secretAccessKey: import.meta.env.AWS_SECRET_ACCESS_KEY
-    // }
-
     const config={
-        bucketName: "acfp-public-bucket",
-        dirName: "acfp-main-folder",
-        region: "ap-south-1",
-        accessKeyId: "AKIAYS2NTGCF6D3VLLSO",
-        secretAccessKey: "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"
-        // bucketName: "",
-        // dirName:"userprofiles",
-        // region: "",
-        // accessKeyId: "",
-        // secretAccessKey: ""
-      }
+            bucketName: import.meta.env.AWS_BUCKET_NAME,
+            dirName: "acfp-main-folder",
+            region: import.meta.env.AWS_BUCKET_REGION,
+            accessKeyId: import.meta.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: import.meta.env.AWS_SECRET_ACCESS_KEY
+          }
 
     const handleFileUpload=(event)=>{
         const file = event.target.files[0];
